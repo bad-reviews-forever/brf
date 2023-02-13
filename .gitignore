@@ -1,0 +1,14 @@
+# Ignore everything in the root
+/*
+# Ignore working trees
+/alpha/
+/stable/
+/beta/
+# ignore private keys
+*.pgp
+*.p8
+*.py
+# Un-ignore markdown files
+!*.md
+# Un-ignore gitignore
+!.gitignore
