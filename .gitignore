@@ -1,8 +1,22 @@
+#ignore everything in root
+/*
 # ignore private keys
 *.pgp
 *.p8
 *.py
+# Un-ignore index.html
+!/index.html
+# Un-ignore LICENSE
+!/LICENSE
+# Un-ignore wireframe images.
+!/wireframe*.png
 # Un-ignore markdown files
-!*.md
+!/*.md
+# Un-ignore CSS in CSS dir
+!/css/*.css
+# Un-ignore JS in JS dir
+!/js/*.js
+# Un-ignore images in image dir
+!/images/*.png
 # Un-ignore gitignore
 !.gitignore
