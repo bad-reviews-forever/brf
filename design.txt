@@ -1,5 +1,4 @@
 I am writing a simple website called 'Bad Reviews FOREVER' or 'brF' for short.
-
 bnF is a website for immortalising bad reviews.
 bnF starts with a full-width <header>.
 The header contains a <h1> title styled using css to look like cuneiform engraved in ancient clay.
@@ -22,7 +21,7 @@ the slab shows either 2 previously submitted bad reviews with a blank/template s
 up to 3 blank template spaces, if there are not at least two user reviews to display.
 the form:
 bnF allows a user to record their bad review via a simple, but thematic web form.
-the form has 6 text entry areas, one checkbox, and one submit button.
+The form has 6 text entry areas, one checkbox, and one submit button.
 text entry areas:
 1: user name
 2: user location
@@ -44,13 +43,13 @@ The chart combines the user's submitted data with data kept in local storage. la
 The chart shows an area graph.
 The chart y axis tracks the number of bad reviews
 the chart x axis shows bad reviews over time
-the centermost data point on the x-axis represents the current review.
+The centermost data point on the x-axis represents the current review.
 The data points before this represent the past.
 The data points after this are a projection of the future.
 The middle of the future projection shows the projected date and time 100 reviews will be accumulated.
 The end of the future projection shows the projected date the real copper tablet will be engraved.
 form submission:
-once the user has submitted their bad review, a css/javascript animation etches the bad review into the blank/template space at the top of the slab element.
+when the user submits their bad review, a css/javascript animation etches the bad review into the blank/template space at the top of the slab element.
 When this animation is complete, the slab smoothly expands its 100vh container downwards offscreen to reveal more user reviews.
 The slab can make its container grow to show up to 15 reviews, taking up to 250vh by default.
 at the bottom of this expansion is a wide, short down-chevron, z-aligned over the bottom o the last shown entry,
@@ -59,9 +58,9 @@ The last main content section describes in detail the plot to have a modern slab
 down the left-hand side of this written timeline runs a gradually thickening line that frames the bullet points for the events within the timeline, and ends with an arrowhead pointing to the result of the new tablet being displayed.
 Only then does the site confirm that the British museum has not been consulted on this, and will be presented with the tablet as part of a live-recorded unannounced visit.
 The <footer> is a full width splash mirroring the dimensions and colouring of the <header>
-the <footer> contains boilerplate acknowledgments and copyright notices and links to the developer's github and social media.
+The <footer> contains boilerplate acknowledgments and copyright notices and links to the developer's github and social media.
 While elaborate, the site is, in effect, a simple guestbook that has only one html file, and is navigated using anchor tags that jump between sections within it.
 The intended audience is anyone with a bad review they wish to immortalise, thereby turning a bad memory into a source of entertainment.
-the site has the tone of a bathos, it is an absurd and pointless amusement with a serious documentary tone.
+The site has the tone of a bathos, it is an absurd and pointless amusement with a serious documentary tone.
 I have not picked branding for the site yet.  
-The color scheme should appear ancient or classical, and befit a museum.
+The color appears ancient or classical, and befit a museum

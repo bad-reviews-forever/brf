@@ -57,4 +57,3 @@ Repeat H2
 - #C67349 Copper slab accent (Copper)
 - #8B4F2C Copper slab fill (Rust)
 - #5F3C23 Copper slab shadow (Dark Brown)
-
