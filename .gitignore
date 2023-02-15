@@ -5,20 +5,19 @@
 *.p8
 *.py
 # Un-ignore index.html
-!/index.html
+!index.html
 # Un-ignore LICENSE
-!/LICENSE
+!LICENSE
 # Un-ignore wireframe images.
-!/wireframe*.png
+!wireframe*.png
 # Un-ignore markdown files
-!/*.md
+!*.md
 # Un-ignore CSS in CSS dir
-!/css/*.css
-# Un-ignore JS in JS dir
-!/js/*.js
+!css/*.css
+# Un-ignore JS and MD in JS dir
+!js/*.js
+!js/*.md
 # Un-ignore images in image dir
-!/images/*.png
+!images/*.png
 # Un-ignore gitignore
 !.gitignore
-index.html
-index.html

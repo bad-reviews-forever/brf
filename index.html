@@ -1,62 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Reviews FOREVER</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Bad Reviews FOREVER</h1>
-    </header>
-    <main>
-      <section>
-        <h2>The Complaint Tablet to Ea-nasir</h2>
-        <p>A short history about the complaint tablet to Ea-nasir.</p>
-      </section>
-      <section>
-        <h2>Record Your Indelible Complaint</h2>
-        <form>
-          <label for="user-name">User Name</label>
-          <input type="text" id="user-name" name="user-name" />
-          <label for="user-location">User Location</label>
-          <input type="text" id="user-location" name="user-location" />
-          <label for="complaint-text">Complaint Text</label>
-          <textarea id="complaint-text" name="complaint-text" maxlength="200"></textarea>
-          <label for="target-of-complaint">Target of Complaint</label>
-          <input type="text" id="target-of-complaint" name="target-of-complaint" />
-          <label for="target-occupation">Target Occupation</label>
-          <input type="text" id="target-occupation" name="target-occupation" />
-          <label for="user-email">User Email</label>
-          <input type="email" id="user-email" name="user-email" />
-          <label for="contact-offer">Contact me once 100 bad reviews are recorded</label>
-          <input type="checkbox" id="contact-offer" name="contact-offer" />
-          <input type="submit" value="Submit" />
-        </form>
-        <div class="slab">
-          <h3>Previously Recorded Indelible Complaints</h3>
-          <ul>
-            <li>Complaint 1</li>
-            <li>Complaint 2</li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <h2>Modern Slab of Indelible Complaints at the British Museum</h2>
-        <p>Details about the plot to have a modern slab of indelible complaints displayed at the British Museum.</p>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; Bad Reviews FOREVER</p>
-      <nav>
+  <meta charset="UTF-8">
+  <title>Bad Reviews FOREVER</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Bad Reviews FOREVER</h1>
+  </header>
+  <main>
+    <section>
+      <h2>The Complaint Tablet to Ea-nasir</h2>
+      <p>A short history about the 'complaint tablet to Ea-nasir'</p>
+      <img src="complaint-tablet.jpg" alt="Complaint tablet to Ea-nasir">
+    </section>
+    <section>
+      <h2>How to Record an Indelible Complaint</h2>
+      <p>Instructions on how to record an indelible complaint, and the tablet will be made of copper</p>
+      <img src="copper-tablet.jpg" alt="Copper tablet">
+    </section>
+    <section>
+      <h2>Record Your Bad Review</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="complaint">Complaint:</label>
+        <textarea id="complaint" name="complaint" rows="5" maxlength="200" required></textarea>
+
+        <label for="target">Target:</label>
+        <input type="text" id="target" name="target" required>
+
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="checkbox" id="contact" name="contact" value="contact">
+        <label for="contact">Contact me when 100 bad reviews are recorded</label>
+
+        <input type="submit" value="Submit">
+      </form>
+      <div class="slab">
+        <h3>Indelible Complaints</h3>
         <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>Bad review 1</li>
+          <li>Bad review 2</li>
         </ul>
-      </nav>
-    </footer>
-  </body>
+      </div>
+    </section>
+    <section>
+      <h2>A Modern Slab of Indelible Complaints at the British Museum</h2>
+      <p>Details about the plot to have a modern slab of indelible complaints displayed at the British museum alongside Nanni's</p>
+      <img src="british-museum.jpg" alt="British museum">
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2021 Bad Reviews FOREVER</p>
+    <nav>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
 </html>

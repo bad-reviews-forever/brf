@@ -1,31 +1,36 @@
-# Bad Reviews FOREVER - A Design Outline
+# brF Design principles
 
-## Introduction
+I am designing a website called 'Bad Reviews FOREVER' or 'brF'. The website is created for immortalizing bad reviews. The layout of the website is as follows:
 
-Bad Reviews FOREVER (brF) is a website that aims to immortalize bad reviews in a creative and engaging way. The website uses a thematic approach to encourage users to submit their complaints and grievances, which are then displayed on a virtual engraved copper slab. This design outline presents the technical details of the website.
-
-## Design Elements
-
-### Header
-
-The website's header is a full-width section that contains the site's title, "Bad Reviews FOREVER," styled using CSS to look like cuneiform engraved in aged copper.
-
-### Main Content
-
-The main content of the website consists of multiple absolute positioned block subsections of marginally different background color that the user can scroll through. Each section captures the scroll wheel to scroll its own content, if required. The first main content section is a short story presented in a "drunk history" style, which introduces the concept of an indelible bad review. The story is favourable to the displeased customer named "Nanni" and encourages the user to record their own bad reviews.
-
-The second main content section is a web form that allows users to record their bad review via a simple, but thematic web form. The form contains six text entry areas, one checkbox, and one submit button. The form submission is followed by a chart.js chart that combines the user's submitted data with data kept in local storage. The chart shows an area graph with the y-axis tracking the number of bad reviews and the x-axis showing bad reviews over time.
-
-The final main content section describes in detail the plot to have a modern slab of indelible complaints displayed at the British museum alongside Nanni's. This section includes a timeline with gradually thickening line that frames the bullet points for the events within the timeline, and ends with an arrowhead pointing to the result of the new tablet being displayed.
-
-### Footer
-
-The website's footer is a full-width splash that contains boilerplate acknowledgments and copyright notices, as well as links to the developer's GitHub and social media.
-
-### Features
-
-The website uses a creative approach to encourage users to submit their bad reviews in a thematic and engaging way. The website includes a virtual engraved copper slab, which displays the user's bad review in a visually appealing format. The website also includes a web form that allows users to submit their bad reviews, which are then displayed on the virtual slab. The website uses chart.js to create an area graph that tracks the number of bad reviews over time. The website also includes a timeline that outlines the plot to have a modern slab of indelible complaints displayed at the British museum.
-
-## Conclusion
-
-Bad Reviews FOREVER is a unique website that encourages users to submit their bad reviews in a creative and engaging way. The website uses a thematic approach to make the process of submitting a bad review more enjoyable and visually appealing. The website includes multiple features, including a virtual engraved copper slab, a web form, and a timeline. These features work together to create a cohesive and enjoyable user experience.
+- The `<header>` takes up the full width of the page, and its `<h1>` title is styled to look like cuneiform engraved in ancient clay.
+- The `<main>` content is centrally justified and has left and right margins, with an accent color matching the `<header>` background.
+- The `<main>` content is composed of absolute-positioned block 100vh subsections with slightly varying background colors.
+- Each 100vh section captures the scroll wheel to scroll its own content, if required.
+- The first `<main>` section presents a short history about the 'complaint tablet to Ea-nasir'.
+- Each 100vh section has at least one image or figure that contributes to the story.
+- The story is told in a sometimes somber, sometimes hyperbolic or bombastic tone, similar to how 'drunk history' stories are structured.
+- The story introduces the concept of an indelible bad review and supports the displeased customer named 'Nanni'.
+- The `<main>` section explains how to record an indelible complaint, and the tablet will be made of copper.
+- The second `<main>` section contains two elements that take roughly 50vh each.
+  - The first element is a web form that allows users to record their bad review via a simple and thematic web form.
+  - The second element is a slab styled after an engraved clay tablet that shows up to 2 previously submitted bad reviews, with a blank/template space for the user's review above. If there are not at least two user reviews to display, the slab will show up to 3 blank template spaces.
+- The form contains six text entry areas, one checkbox, and one submit button.
+  - The text entry areas are as follows:
+        1. User name
+        2. User location
+        3. The complaint text, allowing up to 200 characters.
+        4. The target of the complaint
+        5. The target's occupation
+        6. User email
+  - The user can accept the offer on the checkbox that will contact them once 100 bad reviews are recorded.
+  - The submitted bad reviews are displayed as an area graph using chart.js.
+  - The chart y-axis tracks the number of bad reviews, and the x-axis shows bad reviews over time.
+- When the user submits the form, a CSS/JavaScript animation etches the bad review into the slab element. The slab smoothly expands its 100vh container downwards offscreen to reveal more user reviews after the animation.
+  - The slab can grow to show up to 15 reviews, taking up to 250vh by default.
+  - A wide, short down-chevron at the bottom of the expansion allows for more reviews to be shown.
+- The last `<main>` section describes in detail the plot to have a modern slab of indelible complaints displayed at the British museum alongside Nanni's.
+  - Down the left-hand side of this written timeline runs a gradually thickening line that frames the bullet points for the events within the timeline and ends with an arrowhead pointing to the result of the new tablet being displayed.
+  - Only then does the site confirm that the British museum has not been consulted on this and will be presented with the tablet as part of a live-recorded unannounced visit.
+- The `<footer>` is a full-width splash that matches the dimensions and coloring of the `<header>`.
+  - The `<footer>` contains a centered copyright notice and links to the website's terms of service, privacy policy, and contact page.
+  
