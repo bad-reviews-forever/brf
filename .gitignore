@@ -20,3 +20,5 @@
 !/images/*.png
 # Un-ignore gitignore
 !.gitignore
+index.html
+index.html
