@@ -1,24 +1,23 @@
 I am writing a simple website called 'Bad Reviews FOREVER' or 'brF' for short.
-bnF is a website for immortalising bad reviews
-bnF starts with a full-width <header>
-The header contains a <h1> title styled using css to look like cuneiform engraved in aged copper.
+
+bnF is a website for immortalising bad reviews.
+bnF starts with a full-width <header>.
+The header contains a <h1> title styled using css to look like cuneiform engraved in ancient clay.
 The <main> content is centrally justified, and has left and right margins in an accent of the <header> background color.
 The main content consists of absolute positioned block 100vh subsections of marginally different background color that the user scrolls through.
 Each section captures the scroll wheel to scroll its own content, if required.
-the first main content section is comprised of at most 3 subsections
-the first main content section presents a story where:
-brF users are presented with a short, irreverent history piece about the legendary 'complaint tablet to Ea-nasir'.
-brF's short story has spaces for images and figures that meaningfully contribute to the story
-brF's short story starts by introducing the concept of an indelible bad review.
-brF's short story is told roughly in the style of 'drunk history'.
-brF's short story is favourable to the displeased customer named 'Nanni'.
-brF's short story convinces the user that Nanni was in the right.
-brF's short story convinces the user that they too should record an indelible complaint.
-brF's short story takes up a maximum of 3 separate 100vh main content containers
+The first main content section has most 3 100vh subsections and presents a short, irreverent history piece about the legendary 'complaint tablet to Ea-nasir'.
+Each 100vh section has at least one image or figures that meaningfully contributes to the story.
+The story is told in a sometimes somber, sometimes hyperbolic or bombastic tone, similar to how 'drunk history' stories are structured.
+The story starts by introducing the concept of an indelible bad review.
+The story is favourable to the displeased customer named 'Nanni'.
+The story convinces the user that Nanni was in the right.
+The story convinces the user that they too should record an indelible complaint.
+brF's short story explains that this is possible, and that our tablet will be copper not clay, so last for even longer.
 
 The second main content section contains two elements, each taking up roughly 50vh.
 The first is a web form
-the second is an element styled after an engraved copper slab.
+the second is an element styled after an engraved clay tablet or slab
 the slab shows either 2 previously submitted bad reviews with a blank/template space for the user's review above, or.
 up to 3 blank template spaces, if there are not at least two user reviews to display.
 the form:
@@ -37,7 +36,7 @@ target complaint and occupation share a row if permitted by viewport width
 The user email entry box shares a row with a checkbox, ticking the checkbox accepts an offer.
 The offer is described in a caption on the next row.
 The offer promises to contact the user once 100 bad reviews have been recorded.
-The offer promises the user their review, if approved, can be etched into a real copper slab along with others, which will be offered to the british museum.
+The offer promises the user their review, if approved, will be immortalised like Nanni's. Nanni used clay - we can do better,  using a copper template. slab along with others, which will be offered to the British museum.
 The offer promises this for a fee of £10, reduced to £5 for users who sign up before 80 bad reviews are recorded.
 on the next row is a full-width form submit button, stylised to look like etched copper.
 Once the form is submitted, bnF displays a chart.js chart in place of the input form.
@@ -62,3 +61,7 @@ Only then does the site confirm that the British museum has not been consulted o
 The <footer> is a full width splash mirroring the dimensions and colouring of the <header>
 the <footer> contains boilerplate acknowledgments and copyright notices and links to the developer's github and social media.
 While elaborate, the site is, in effect, a simple guestbook that has only one html file, and is navigated using anchor tags that jump between sections within it.
+The intended audience is anyone with a bad review they wish to immortalise, thereby turning a bad memory into a source of entertainment.
+the site has the tone of a bathos, it is an absurd and pointless amusement with a serious documentary tone.
+I have not picked branding for the site yet.  
+The color scheme should appear ancient or classical, and befit a museum.

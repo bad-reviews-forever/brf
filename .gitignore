@@ -1,5 +1,8 @@
-# Ignore everything in the root
+# Ignore everything in the root 
 /*
+# Un-ignore markdown files and wireframe pngs.
+!/*.md
+!/wireframe*.png
 # Ignore working trees
 /alpha/
 /stable/
@@ -8,7 +11,5 @@
 *.pgp
 *.p8
 *.py
-# Un-ignore markdown files
-!*.md
 # Un-ignore gitignore
 !.gitignore
