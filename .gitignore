@@ -13,10 +13,10 @@
 # Un-ignore markdown files
 !*.md
 # Un-ignore CSS in CSS dir
-!css/*.css
+!css/
 # Un-ignore JS and MD in JS dir
-!js/*.js
-!js/*.md
+!js/
+!images/
 # Un-ignore images in image dir
 !images/*.png
 # Un-ignore gitignore
