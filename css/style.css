@@ -1,75 +1,169 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
-header {
-  background-color: #2B2D42;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  color: #F2643D;
-  padding: 2rem;
+header, footer {
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+  height: 20vh;
+  min-height: min-content;
+  background-color: #8B4F2C;
+  background-image: url(images/head.png) cover;
+  background: radial-gradient(ellipse at center,#571e1f, #5F3C23, #8B4F2C, #C67349, rgba(255, 255, 255, 0));
+  text-align: center;
+  align-items:center;
+  color:#f9cfa7;
 }
 
 h1 {
-  color: #FF8A5B;
-  font-size: 3rem;
-  margin: 0;
+  color: #ff8a5b;
+  text-shadow: -1px -1px 2px #f2643d, 1px 1px 2px #f9cfa7;
+  font-size: 5rem;
+margin:0;
+padding:0;
 }
 
 main {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 2rem;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
 }
 
-section {
-  position: relative;
+main section {
+  min-height: min-content;
+  display: flex;
+  width: 100%;
   height: 100vh;
+  background: linear-gradient(to bottom, #f1ead5, #ede6d1, #ebe1cd, #e7dcc8, #e4d8c4, #e1d4c0);
+}
+
+main section:nth-child(1),
+main section:nth-child(2),
+main section:nth-child(6) {
+  flex-direction: row;
+}
+
+main section:nth-child(1) article,
+main section:nth-child(2) article,
+main section:nth-child(6) article {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+  width: 80%;
+  height: 100%;
+  text-align: left;
+  word-wrap: break-word;
 }
 
-section:nth-child(odd) {
-  background-color: #F1EAD5;
+main section:nth-child(1) figure,
+main section:nth-child(2) figure,
+main section:nth-child(6) figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  overflow:hidden;
+}
+main section:nth-child(1) figure img,
+main section:nth-child(6) figure img{
+  position:relative;
+  right: 0;
+  height: 100%;
+  width: auto;
+}
+main section:nth-child(2) figure img{
+  position:relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
 }
 
-section:nth-child(even) {
-  background-color: #EDE6D1;
+main section:nth-child(3) article {
+  height: 75%;
 }
 
-h2 {
-  color: #F6B48F;
-  font-size: 2.5rem;
+main section:nth-child(3) figure {
+  height: 25%;
+  overflow:hidden;
+}
+main section:nth-child(3) figure img{
+  position:relative;
+bottom: 0;
+  width: 100%;
+  height:auto;
+}
+main section:nth-child(3) article,
+main section:nth-child(4) article,
+main section:nth-child(5) article {
+  width: 100%;
+}
+
+main section:nth-child(4) article {
+  height: 50vh;
+}
+
+h1, h2, h3, h4, h5,  h6 {
+  width: 100%;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-p {
-  color: #1D3C3D;
+h2 {
+  color: #f6b48f;
+  text-shadow: -1px -1px 2px #f4a26a, 1px 1px 2px #f9cfa7;
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: #00afb9;
+  text-shadow: -1px -1px 2px #0081a7, 1px 1px 2px #00dac7;
+  font-size: 2rem;
+}
+
+h4 {
+  color: #7f2b2e;
+  text-shadow: -1px -1px 2px #571e1f, 1px 1px 2px #bf3c3e;
   font-size: 1.5rem;
-  line-height: 2rem;
-  margin: 0 0 2rem;
 }
 
-img {
-  margin-top: auto;
-  max-height: 50%;
-  max-width: 100%;
+h5 {
+  color: #f6b48f;
+  text-shadow:  -1px -1px 2px #f4a26a, 1px 1px 2px #f9cfa7;
+  font-size: 1rem;
 }
 
-footer {
-  background-color: #2B2D42;
-  color: #F2643D;
-  padding: 2rem;
+main p {
+  color: #1d3c3d;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+blockquote {
+  line-height: 1.5rem;
+}
+
+q {
+  color: #1d3c3d;
+  font-style: italic;
 }
 
 ul {
@@ -79,11 +173,11 @@ ul {
 }
 
 a {
-  color: #F9CFA7;
+  color: #f9cfa7;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-  color: #F6B48F;
+  color: #f6b48f;
 }
