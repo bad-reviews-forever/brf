@@ -1,7 +1,7 @@
 /* Fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Cuneiform&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -12,16 +12,19 @@ body {
   margin: 0;
   padding: 0;
 }
-
 header, footer {
   display: flex;
   flex-direction:row;
   width: 100%;
   height: 20vh;
   min-height: min-content;
+  background: url("/images/head.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  /* background: radial-gradient(ellipse at center,#571e1f, #5F3C23, #8B4F2C, #C67349, rgba(255, 255, 255, 0)); 
   background-color: #8B4F2C;
-  background-image: url(images/head.png) cover;
-  background: radial-gradient(ellipse at center,#571e1f, #5F3C23, #8B4F2C, #C67349, rgba(255, 255, 255, 0));
+  */
   text-align: center;
   align-items:center;
   color:#f9cfa7;
@@ -29,7 +32,8 @@ header, footer {
 
 h1 {
   color: #ff8a5b;
-  text-shadow: -1px -1px 2px #f2643d, 1px 1px 2px #f9cfa7;
+  font-family: 'Noto Sans Cuneiform', sans-serif;
+  text-shadow: -0.05rem -0.05rem 0.15rem #f2643d,0.025rem 0.025rem 0.15rem #f9cfa7;
   font-size: 5rem;
 margin:0;
 padding:0;
@@ -46,6 +50,7 @@ main {
 main section {
   min-height: min-content;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #f1ead5, #ede6d1, #ebe1cd, #e7dcc8, #e4d8c4, #e1d4c0);
@@ -63,7 +68,7 @@ main section:nth-child(6) article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding:0 1rem;
   width: 80%;
   height: 100%;
   text-align: left;
@@ -113,10 +118,13 @@ main section:nth-child(3) article,
 main section:nth-child(4) article,
 main section:nth-child(5) article {
   width: 100%;
+padding: 0.5rem 1rem;
+margin:0;
 }
 
 main section:nth-child(4) article {
   height: 50vh;
+  padding:0;
 }
 
 h1, h2, h3, h4, h5,  h6 {
@@ -138,9 +146,11 @@ h3 {
 }
 
 h4 {
-  color: #7f2b2e;
-  text-shadow: -1px -1px 2px #571e1f, 1px 1px 2px #bf3c3e;
-  font-size: 1.5rem;
+  color:#ffcbae;
+  text-shadow: -0.1rem -0.1rem 0.1rem #312219, 0.1rem 0.1rem 0.1rem #583d2d;
+  font-size: 1.3rem;
+  line-height: 1.0rem;
+  display:inline;
 }
 
 h5 {

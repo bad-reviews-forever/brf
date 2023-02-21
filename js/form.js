@@ -1,29 +1,57 @@
-let form = document.querySelector('form');
+let form = document.querySelector('.form');
 const slab = document.querySelector('.slab');
-const complaintList = slab.querySelector('ul');
-const complaintTemplate = complaintList.querySelector('li');
-
-// let badReviews = [];
+const complaintList = slab.querySelector('.complaint-list');
+const complaintTemplate = document.querySelector('.complaint-template');
 
 // Render the complaint list
 function renderComplaints() {
   complaintList.innerHTML = '';
 
-  badReviews.forEach((complaint) => {
-    const complaintItem = complaintTemplate.cloneNode(true);
-    complaintItem.textContent = `${complaint.name} from ${complaint.location} complained about ${complaint.target} being a ${complaint.occupation}.`;
+  if (badReviews.length === 0) {
+    const fillerComplaintItem = complaintTemplate.content.cloneNode(true);
+    complaintList.appendChild(fillerComplaintItem);
+  } else {
+    badReviews.forEach((complaint) => {
+      const complaintItem = document.createElement('div');
+      complaintItem.classList.add('complaint-item');
 
-    complaintList.appendChild(complaintItem);
-  });
+      const figure = document.createElement('figure');
+      figure.classList.add('complaint-image');
+      const image = document.createElement('img');
+      image.src = '/images/angry.png'; // set the image file URL here
+      figure.appendChild(image);
+      complaintItem.appendChild(figure);
+
+      const aside = document.createElement('aside');
+      aside.classList.add('complaint-text');
+
+      const item1 = document.createElement('figcaption');
+      item1.classList.add('complaint-text-figcaption');
+      item1.insertAdjacentHTML('beforeend', `<h4>${complaint.name}</h4>, the Unhappy Customer of ${complaint.location} was wronged by <h4>${complaint.target}</H4>, faithless ${complaint.occupation}.`);
+      aside.appendChild(item1);
+
+      const item2 = document.createElement('figcaption');
+      item2.classList.add('complaint-text-figcaption');
+      item2.insertAdjacentHTML('beforeend', `${complaint.complaint}`);
+      aside.appendChild(item2);
+
+      const item3 = document.createElement('figcaption');
+      item3.classList.add('complaint-text-figcaption');
+      item3.insertAdjacentHTML('beforeend', `<h4>May this misdeed be remembered FOREVER</h4>`);
+      aside.appendChild(item3);
+      complaintItem.appendChild(aside);
+      complaintList.appendChild(complaintItem);
+    });
+  }
 }
 
 // Save complaint data to local storage
-function savebadReviews() {
+function saveBadReviews() {
   localStorage.setItem('badReviews', JSON.stringify(badReviews));
 }
 
 // Load complaint data from local storage
-function loadbadReviews() {
+function loadBadReviews() {
   const badReviewsJSON = localStorage.getItem('badReviews');
 
   if (badReviewsJSON !== null) {
@@ -33,7 +61,7 @@ function loadbadReviews() {
   renderComplaints();
 }
 
-loadbadReviews();
+loadBadReviews();
 
 // Form submit event handler
 function formSubmit(event) {
@@ -62,7 +90,7 @@ function formSubmit(event) {
   badReviews.push(newComplaint);
 
   renderComplaints();
-  savebadReviews();
+  saveBadReviews();
 
   // Reset form fields
   form.reset();
@@ -73,6 +101,13 @@ function formSubmit(event) {
     left: 0,
     behavior: 'smooth',
   });
-}
 
+  // Replace the form with the chart
+  const chartContainer = document.createElement('div');
+  chartContainer.classList.add('chart-container');
+  const canvas = document.createElement('canvas');
+  canvas.classList.add('chart');
+  chartContainer.appendChild(canvas);
+  slab.replaceChild(chartContainer, form);
+}
 form.addEventListener('submit', formSubmit);

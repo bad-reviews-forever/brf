@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bad Reviews FOREVER</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="stylesheet" href="css/slab.css" />
-    <link rel="stylesheet" href="css/chart.css" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/form.css" />
+    <link rel="stylesheet" type="text/css" href="/css/slab.css" />
+    <link rel="stylesheet" type="text/css" href="/css/chart.css" />
   </head>
   <body>
     <header>
@@ -51,13 +51,13 @@
           <p>The letter ends with Nanni telling Ea-nasir that he will never do business with him again.</p>
         </article>
         <figure>
-          <img src="images/nanni.jpg" alt="Enki, the Sumerian water god." />
+          <img src="/images/nanni.jpg" alt="Enki, the Sumerian water god." />
           <figcaption>Nanni has had the WORST day.</figcaption>
         </figure>
       </section>
       <section>
         <figure>
-          <img src="images/ea-nasir.png" alt="Complaint tablet to Ea-nasir" />
+          <img src="/images/ea-nasir.png" alt="Complaint tablet to Ea-nasir" />
           <figcaption>... but Ea-Nasir doesn't care.</figcaption>
         </figure>
         <article>
@@ -111,7 +111,7 @@
           </p>
         </article>
         <figure>
-          <img src="images/tail.jpg" alt="Sumerian statues face off over a backdrop of fire." />
+          <img src="/images/tail.jpg" alt="Sumerian statues face off over a backdrop of fire." />
         </figure>
       </section>
       <section>
@@ -119,73 +119,54 @@
           <div class="form-container">
             <form class="form">
               <label for="name">Name:</label> <label for="location">Location:</label>
-              <input type="text" id="name" name="name" required /><input type="text" id="location" name="location" required />
+              <input type="text" id="name" name="name" required /><input
+                type="text"
+                id="location"
+                name="location"
+                required
+              />
               <label for="complaint">Complaint:</label>
-              <textarea id="complaint" name="complaint" rows="5" maxlength="200" required></textarea>
-              <label for="target">Target:</label>              <label for="occupation">Occupation:</label>
+              <textarea id="complaint" name="complaint" rows="3" maxlength="250" required></textarea>
+              <label for="target">Target:</label> <label for="occupation">Occupation:</label>
               <input type="text" id="target" name="target" required />
               <input type="text" id="occupation" name="occupation" required />
-              <label for="email">Email:</label>    <label for="contact"></label>
-              <input type="email" id="email" name="email"/>
+              <label for="email">Email:</label> <label for="contact"></label>
+              <input type="email" id="email" name="email" />
               <input type="checkbox" id="contact" name="contact" value="contact" />
-              <figure>I want my name on the -real- tablet, too! Contact me when 100 bad reviews are recorded to request payment.</figure>
+              <figure>
+                I want to be on the -real- tablet, too! Contact me when 100 bad reviews are recorded to request payment.
+              </figure>
               <input type="submit" value="Submit" />
             </form>
           </div>
         </article>
         <article class="slab-container">
           <div class="slab">
-            <h3>Indelible Complaints</h3>
-            <ul>
-              <li>Bad review 1</li>
-              <li>Bad review 2</li>
-              <li>Bad review 3</li>
-            </ul>
+            <div class="complaint-list"></div>
+            <template class="complaint-template">
+              <div class="complaint-item">
+                <figure class="complaint-image">
+                  <img src="/images/angry.png" alt="Angry face" />
+                </figure>
+                <aside class="complaint-text">
+                  <figcaption class="complaint-text-figcaption"><h4>Nanni</h4>, Unhappy Customer of Ur was wronged by <h4>Ea-Nasir</H4>,faithless Copper Merchant:</figcaption>
+                  <figcaption class="complaint-text-figcaption">You put ingots which were not good before my messenger (Sit-Sin) and said:
+                    "' If you want to take them, take them; if you do not want to take them, go away!'"</figcaption>
+                  <figcaption class="complaint-text-figcaption"><h4>May this misdeed be remembered FOREVER</h4></figcaption>
+                </aside>
+              </div>
+            </template>
+            <div class="chevron"></div>
           </div>
+          
         </article>
       </section>
-      <section class="slab-expand">
-        <div class="slab-expand">
-          <h3>Indelible Complaints</h3>
-          <ul>
-            <li>Bad review 1</li>
-            <li>Bad review 2</li>
-            <li>Bad review 3</li>
-            <li>Bad review 4</li>
-          </ul>
-        </div>
-        <div class="slab-expand">
-          <h3>Indelible Complaints</h3>
-          <ul>
-            <li>Bad review 5</li>
-            <li>Bad review 6</li>
-            <li>Bad review 7</li>
-          </ul>
-        </div>
-        <div class="slab-expand">
-          <h3>Indelible Complaints</h3>
-          <ul>
-            <li>Bad review 8</li>
-            <li>Bad review 9</li>
-            <li>Bad review 10</li>
-          </ul>
-        </div>
-        <div class="slab-expand">
-          <h3>Indelible Complaints</h3>
-          <ul>
-            <li>Bad review 11</li>
-            <li>Bad review 12</li>
-            <li>Bad review 13</li>
-          </ul>
-        </div>
-        <div class="slab-expand">
-          <h3>Indelible Complaints</h3>
-          <ul>
-            <li>Bad review 14</li>
-            <li>Bad review 15</li>
-            <li>Bad review 16</li>
-          </ul>
-        </div>
+      <section>
+        <article>
+          <div class="slab-expand">
+    text
+          </div>
+        </article>
       </section>
       <section>
         <article>
@@ -214,10 +195,15 @@
           </p>
         </article>
         <figure>
-          <img src="british-museum.jpg" alt="British museum" />
+          <img src="/images/history.png" alt="British museum" />
         </figure>
       </section>
     </main>
+    <script src="/js/main.js" type="application/javascript"></script>
+    <script src="/js/form.js" type="application/javascript"></script>
+    <script src="/js/slab.js" type="application/javascript"></script>
+    <script src="/js/chart.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest"></script>
     <footer>
       <nav>
         <ul>
@@ -226,13 +212,13 @@
           <li><a href="#">Contact Us</a></li>
         </ul>
       </nav>
-      <figure>
-      <p>&copy; 2023 Bad Reviews FOREVER. Written by addPCB and Chat GPT.</p>
-      <p>
-        This website is licensed under the MIT License. All images and text are either original or used with permission.
-        Complaint tablet images used with permission from the British Museum
-      </p>
+      <aside>
+        <p>&copy; 2023 Bad Reviews FOREVER. Written by addPCB and Chat GPT.</p>
+        <p>
+          This website is licensed under the MIT License. All images and text are either original or used with
+          permission. Complaint tablet images used with permission from the British Museum
+        </p>
+      </aside>
     </footer>
-  </figure>
   </body>
 </html>

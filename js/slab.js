@@ -4,39 +4,33 @@ const REVIEW_HEIGHT = 40;
 // Define the maximum number of reviews to display at once
 const MAX_REVIEWS = 15;
 
-// Add event listener for form submission 
-document.querySelector('form').addEventListener('submit', (event) => {
-  event.preventDefault();
+// Function to load bad reviews
+function loadbadReviews() {
+  const reviews = document.querySelectorAll('.slab div');
+  for (let review of reviews) {
+    const text = review.textContent.toLowerCase();
+    if (text.includes('bad') || text.includes('terrible') || text.includes('horrible')) {
+      review.classList.add('bad-review');
+    }
+  }
+}
 
-  // Get the form data and create a new list item with it
-  const formData = new FormData(event.target);
-  const name = formData.get('name');
-  const location = formData.get('location');
-  const complaint = formData.get('complaint');
-  const target = formData.get('target');
-  const occupation = formData.get('occupation');
-  const email = formData.get('email');
-  const review = document.createElement('li');
-  review.textContent = `${name}, ${location}: ${complaint} (about ${target}, a ${occupation}).`;
-
-  // Add the new review to the list and update the chart
-  document.querySelector('.slab ul').prepend(review);
+// Function to initialize the slab
+function initSlab() {
   loadbadReviews();
-
-  // Calculate the new height of the slab
-  const numReviews = document.querySelector('.slab ul').children.length;
+  const numReviews = document.querySelector('.slab').children.length;
   const newHeight = numReviews * REVIEW_HEIGHT + 100;
   let slabHeight = newHeight > MAX_REVIEWS * REVIEW_HEIGHT + 100 ? MAX_REVIEWS * REVIEW_HEIGHT + 100 : newHeight;
-
-  // Animate the slab
-  document.querySelector('.slab').style.transition = 'height 0.5s';
   document.querySelector('.slab').style.height = `${slabHeight}vh`;
-});
-
-// Add event listener for expanding the slab
-document.querySelector('.slab .chevron').addEventListener('click', () => {
-  const currentHeight = document.querySelector('.slab').offsetHeight;
-  const newHeight = currentHeight + 100;
-  let slabHeight = newHeight > MAX_REVIEWS * REVIEW_HEIGHT + 100 ? MAX_REVIEWS * REVIEW_HEIGHT + 100 : newHeight;
-  document.querySelector('.slab').style.height = `${slabHeight}vh`;
-});
+  
+  // Check for the existence of the chevron element before adding the event listener
+  const chevron = document.querySelector('.slab .chevron');
+  if (chevron) {
+    chevron.addEventListener('click', () => {
+      const currentHeight = document.querySelector('.slab').offsetHeight;
+      const newHeight = currentHeight + 100;
+      let slabHeight = newHeight > MAX_REVIEWS * REVIEW_HEIGHT + 100 ? MAX_REVIEWS * REVIEW_HEIGHT + 100 : newHeight;
+      document.querySelector('.slab').style.height = `${slabHeight}vh`;
+    });
+  }
+}

@@ -14,8 +14,8 @@
 
 .chart-container .chart-legend {
   position: relative;
-  top: 5px;
-  right: 5px;
+  top:0.5rem;
+  right:0.5rem;
   font-size: 14px;
   font-weight: bold;
   color: #333;
@@ -23,8 +23,8 @@
 
 .chart-container .chart-title {
   position: relative;
-  top: 5px;
-  left: 5px;
+  top:0.5rem;
+  left:0.5rem;
   font-size: 20px;
   font-weight: bold;
   color: #333;
@@ -45,7 +45,7 @@
 }
 
 .chart-container .chart-x-axis .chart-x-label {
-  margin-left: 5px;
+  margin-left:0.5rem;
 }
 
 .chart-container .chart-y-axis {
@@ -65,5 +65,5 @@
 }
 
 .chart-container .chart-y-axis .chart-y-label {
-  margin-left: 5px;
+  margin-left:0.5rem;
 }
