@@ -1,74 +1,72 @@
-// Create chart
-const ctx = document.querySelector('.chart').getContext('2d');
-const chart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: [],
-    datasets: [{
-      label: 'Number of Complaints',
-      data: [],
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255, 99, 132, 1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      xAxes: [{
-        ticks: {
-          min: 0,
-          max: 0
-        }
-      }]
-    }
-  }
-});
-
-// Add complaint to local storage and update chart
-function addComplaint(complaint) {
-  // Find existing complaint
-  const existingComplaint = badReviews.find(c => c.timestamp === complaint.timestamp);
-
-  // Add or update complaint
-  if (existingComplaint) {
-    existingComplaint.count++;
-  } else {
-    badReviews.push({...complaint, count: 1});
-  }
-
-  // Save complaint data to local storage
-  localStorage.setItem('badReviews', JSON.stringify(badReviews));
-
-  // Update chart
-  loadBadReviews();
+// Define function to draw chart
+function drawChart() {
+  // Create chart
+  const ctx = document.querySelector(".chart").getContext("2d");
+  var chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8"],
+      datasets: [
+        {
+          label: "Project Timeline",
+          data: [null, null, null, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+          borderColor: "blue",
+          backgroundColor: "rgba(0, 0, 255, 0.2)",
+          fill: "origin",
+        },
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Project Timeline",
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              min: 0,
+              max: 100,
+            },
+          },
+        ],
+      },
+      elements: {
+        line: {
+          tension: 0,
+        },
+      },
+      annotation: {
+        annotations: [
+          {
+            type: "box",
+            xScaleID: "x-axis-0",
+            yScaleID: "y-axis-0",
+            xMin: "Q4",
+            xMax: "Q5",
+            backgroundColor: "rgba(0, 255, 0, 0.2)",
+          },
+          {
+            type: "box",
+            xScaleID: "x-axis-0",
+            yScaleID: "y-axis-0",
+            xMin: "Q6",
+            xMax: "Q7",
+            backgroundColor: "rgba(255, 255, 0, 0.2)",
+          },
+          {
+            type: "box",
+            xScaleID: "x-axis-0",
+            yScaleID: "y-axis-0",
+            xMin: "Q8",
+            xMax: "Q8",
+            backgroundColor: "rgba(255, 0, 0, 0.2)",
+          },
+        ],
+      },
+    },
+  });
 }
 
 // Load complaint data from local storage on page load
-loadBadReviews();
-
-// Listen for form submit event
-document.querySelector('form').addEventListener('submit', event => {
-  event.preventDefault();
-
-  // Get form data
-  const name = event.target.elements.name.value;
-  const complaint = event.target.elements.complaint.value;
-
-  // Add complaint to local storage and update chart
-  addComplaint({name, complaint, timestamp: new Date().toISOString()});
-
-  // Reset form
-  event.target.reset();
-});
-
-function loadBadReviews() {
-  badReviews = JSON.parse(localStorage.getItem('badReviews')) || [];
-
-  // Update chart data
-  chart.data.labels = badReviews.map(complaint => complaint.timestamp);
-  chart.data.datasets[0].data = badReviews.map((complaint, i) => ({x: i, y: complaint.count}));
-  chart.options.scales.xAxes[0].ticks.max = badReviews.length - 1;
-
-  // Redraw chart
-  chart.update();
-}
+renderComplaints()
